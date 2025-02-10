@@ -4,11 +4,17 @@
   --bg-color: #222;
   --font-color: #f2f2f2;
   --light-blue: rgb(76, 83, 214);
+  --light-blue-alpha: rgba(76, 83, 214, 0.7);
   --dark-blue: rgb(19, 17, 175);
+  --dark-blue-alpha: rgba(19, 17, 175, 0.7);
   --light-green: rgb(145, 215, 137);
+  --light-green-alpha: rgb(145, 215, 137, 0.7);
   --dark-green: rgb(10, 97, 84);
+  --dark-green-alpha: rgba(10, 97, 84, 0.7);
   --light-red: rgb(223, 78, 112);
+  --light-red-alpha: rgb(223, 78, 112, 0.7);
   --dark-red: rgb(149, 9, 41);
+  --dark-red-alpha: rgba(149, 9, 41, 0.7);
 }
 
 * {
@@ -55,8 +61,8 @@ body {
 .pomodoro:hover,
 .pomodoro.active {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7),
-    -2px -2px 16px rgba(var(--dark-red), 0.7),
-    2px 2px 16px rgba(var(--light-red), 0.7);
+    -2px -2px 16px var(--dark-red-alpha),
+    2px 2px 16px var(--light-red-alpha);
 }
 
 .short-break {
@@ -66,8 +72,8 @@ body {
 .short-break:hover,
 .short-break.active {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7),
-    -2px -2px 16px rgba(var(--dark-green), 0.7),
-    2px 2px 16px rgba(var(--light-green), 0.7);
+    -2px -2px 16px var(--dark-green),
+    2px 2px 16px var(--light-green);
 }
 
 .long-break {
@@ -77,8 +83,8 @@ body {
 .long-break:hover,
 .long-break.active {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7),
-    -2px -2px 16px rgba(var(--dark-blue), 0.7),
-    2px 2px 16px rgba(var(--light-blue), 0.7);
+    -2px -2px 16px var(--dark-blue),
+    2px 2px 16px var(--light-blue);
 }
 
 .circle {
