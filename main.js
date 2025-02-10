@@ -5,7 +5,7 @@ const LONG_BREAK = 900;
 const timerButtons = document.querySelectorAll(".timer-btn");
 const circle = document.querySelector(".circle");
 const innerCircle = document.querySelector(".inner-circle");
-const countdownElement = document.querySelector("countdown h1");
+const countdownElement = document.querySelector(".countdown h1");
 const playPauseElement = document.querySelector(".play-pause");
 
 const buttonSound = new Audio("/sounds/sound_button-sound.mp3");
@@ -17,43 +17,42 @@ let currentDuration;
 let isPaused = true;
 let isStarted = false;
 let endTime;
-let pausedTimeRemaing;
+let pausedTimeRemaining;
 
 const COLORS = {
   [POMODORO]: {
     bg: "rgb(255, 146, 172)",
     border: "rgb(149, 9, 41)",
-    shadow: "rbga(149, 9, 41, 0.7)"
+    shadow: "rgba(149, 9, 41, 0.7)"
   },
   [SHORT_BREAK]: {
     bg: "rgb(187, 255, 179)",
     border: "rgb(10, 97, 84)",
-    shadow: "rbga(10, 97, 84, 0.7)"
+    shadow: "rgba(10, 97, 84, 0.7)"
   },
   [LONG_BREAK]: {
     bg: "rgb(134, 140, 255)",
     border: "rgb(19, 27, 175)",
-    shadow: "rbga(19, 27, 175, 0.7)"
+    shadow: "rgba(19, 27, 175, 0.7)"
   }
 };
 
 function startTimer() {
   if (!isStarted) {
     isStarted = true;
-    endTime = Date.now() + countdown + 1000;
-
+    endTime = Date.now() + countdown * 1000;
     timer = setInterval(() => {
       if (!isPaused) {
         const currentTime = Date.now();
-        const remaingTime = Math.floor(endTime - currentTime) / 1000;
+        const remainingTime = Math.floor((endTime - currentTime) / 1000);
 
-        if (remaingTime <= 0) {
+        if (remainingTime <= 0) {
           clearInterval(timer);
           handleTimerEnd();
           return;
         }
 
-        countdown = remaingTime;
+        countdown = remainingTime;
         updateDisplay(countdown);
 
         const progress = (countdown / currentDuration) * 360;
@@ -127,9 +126,9 @@ playPauseElement.addEventListener("click", () => {
   playPauseElement.textContent = isPaused ? "Play" : "Pause"
 
   if (isPaused) {
-    pausedTimeRemaing = Math.ceil((endTime - Date.now()) / 1000)
+    pausedTimeRemaining = Math.ceil((endTime - Date.now()) / 1000);
   } else {
-    endTime = Date.now() + pausedTimeRemaing * 1000;
+    endTime = Date.now() + pausedTimeRemaining * 1000;
   }
 
   if (!isStarted) {
@@ -137,4 +136,4 @@ playPauseElement.addEventListener("click", () => {
   }
 })
 
-resetTime(POMODORO);
+resetTime(POMODORO); 

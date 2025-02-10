@@ -6,32 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pomodoro App</title>
   <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
 </head>
-
-<div class="timer-buttons">
-  <button class="timer-btn pomodoro active" date-time="1500">
-    Pomodoro
-  </button>
-  <button class="timer-btn short-break" date-time="300">
-    Short Break
-  </button>
-  <button class="timer-btn long-break" date-time="900">
-    Long Break
-  </button>
-</div>
-
-<div class="circle">
-  <div class="inner-circle">
-    <div class="countdown">
-      <h1></h1>
-      <p class="play-pause"></p>
-    </div>
-  </div>
-</div>
 
 <body>
 
+  <div class="timer-buttons">
+    <button class="timer-btn pomodoro active" data-time="1500">
+      Pomodoro
+    </button>
+    <button class="timer-btn short-break" data-time="300">
+      Short Break
+    </button>
+    <button class="timer-btn long-break" data-time="900">
+      Long Break
+    </button>
+  </div>
+
+  <div class="circle">
+    <div class="inner-circle">
+      <div class="countdown">
+        <h1></h1>
+        <p class="play-pause"></p>
+      </div>
+    </div>
+  </div>
+
 </body>
+
+<script src="main.js"></script>
 
 </html>
