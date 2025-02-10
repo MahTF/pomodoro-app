@@ -28,9 +28,6 @@
 
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/mahtf/pomodoro-app?color=blue">
 
-  <!-- version -->
-  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/mahtf/pomodoro-app">
-
   <!-- GitHub repo size -->
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/mahtf/pomodoro-app">
 
@@ -52,6 +49,8 @@
 
 ## :clipboard: Descrição
 Este projeto é sobre uma técnica de estudos conhecida como Pomodoro, onde dividimos as atividades por ciclos, iniciando com 25 minutos para a atividade principal e tendo pausa de 5 ou 15 minutos após a atividade para descanso. 
+
+Baseado neste [video](https://www.youtube.com/watch?v=lZAUQAmKj-k) 
 
 ## :rocket: Iniciando
 
