@@ -69,7 +69,7 @@ Este projeto é sobre uma técnica de estudos conhecida como Pomodoro, onde divi
 
 2. Execução 
 
-- Rode o arquivo [index](<src/index.html>).
+- Rode o arquivo [index](<index.html>).
 
 
 ## 🧐 O que contém
